@@ -18,7 +18,7 @@ warnings.filterwarnings("ignore")
 print("Libraries imported successfully!")
 
 # Cell 2: Load and Prepare Data
-url = "https://raw.githubusercontent.com/urmila-murri/datasets/main/retail_sales.csv"
+url = "retail_sales.csv"
 df = pd.read_csv(url, parse_dates=['date'], index_col='date')
 df = df.resample('Q').sum()  # Quarterly sales
 df.head()
